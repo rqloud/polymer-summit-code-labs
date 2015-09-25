@@ -1,0 +1,1 @@
+Step 5: http://www.code-labs.io/codelabs/polymer-maps/index.html?index=..%2F..%2Fpolymer-summit&viewga=UA-39334307-12#4

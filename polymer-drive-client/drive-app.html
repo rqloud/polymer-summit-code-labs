@@ -1,0 +1,36 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<dom-module id="drive-app">
+	<template>
+		<style>
+			:host {
+				display: block;
+			}
+		</style>
+
+    <div id="loggedin">
+      <div id="dropzone" on-tap="tapSelect" on-dragover="handleDragOver" on-drop="handleFileSelect">
+        Drag files to upload
+        <input type="file" id="files" name="files[]" on-change="handleFilePick" multiple="">
+      </div>
+
+      <paper-toolbar id="dropzone-bar">
+        <div class="flex">
+          <paper-toggle-button checked="{{autoUpload}}" oncaption="On" offcaption="Off"></paper-toggle-button>
+        </div>
+        <div class="flex">
+          <button id="upload" on-click="manualUpload" style$="{{computeStyle(autoUpload)}}">Upload files</button>
+        </div>
+        <div class="flex"></div>
+        <div>
+          
+        </div>
+      </paper-toolbar>
+    </div>
+
+	</template>
+	<script>
+		Polymer({
+			is: 'drive-app'
+		});
+	</script>
+</dom-module>
